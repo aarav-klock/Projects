@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   
+<body>
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+ <section class="home" id="home">
+   <div class="home-content">
+     <div class="text">
+       <div class="text-one">Hello,</div>
+       
+       <div class="text-two"> I'm <span id="name-input"></span></div>
+
+
+
+
+
+
+
+       
+
+
+
+
+
+       <div class="text-three"><span id="profession-input"></span></div>
+       <div class="text-four">From <span id="nationality-input"></span></div>
+     </div>
+     <div class="button">
+       <a href="login page.html"target=_blank><button>Refill the form</button></a>
+     </div>
+   </div>
+ </section>
+<section class="about" id="about">
+  <div class="content">
+    <div class="title"><span>About Me</span></div>
+  <div class="about-details">
+    <div class="left">
+      <img src="images/about.jpg" alt="">
+    </div>
+    <div class="right">
+      <div class="topic"><span id="passion-input">Is My Passion</span></div>
+      <p><span id="aboutyou-input"></span></p>
+      <div class="button">
+        <a href="cv.pdf"><button>Download CV</button></a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="skills" id="skills">
+ <div class="content">
+   <div class="title"><span>My Skills</span></div>
+   <div class="skills-details">
+     <div class="text">
+       <div class="topic">Skills Reflects Our Knowledge</div>
+       <p><span id="yourskills-input"></span></p>
+       <div class="experience">
+         <div class="num"><span id="experience-input"></span></div>
+         <div class="exp">Years Of <br> Experience</div>
+       </div>
+     </div>
+     <div class="boxes">
+       <div class="box">
+         <div class="topic">HTML</div>
+         <div class="per">90%</div>
+       </div>
+       <div class="box">
+         <div class="topic">CSS</div>
+         <div class="per">80%</div>
+       </div>
+       <div class="box">
+         <div class="topic">JavScript</div>
+         <div class="per">70%</div>
+       </div>
+       <div class="box">
+         <div class="topic">PHP</div>
+         <div class="per">60%</div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+ <section class="services" id="services">
+   <div class="content">
+     <div class="title"><span>My Services</span></div>
+     <div class="boxes">
+       <div class="box">
+         <div class="icon">
+           <i class="fas fa-desktop"></i>
+       </div>
+       <div class="topic"><span id="services1-input"></span></div>
+     
+      </div>
+       <div class="box">
+         <div class="icon">
+           <i class="fas fa-paint-brush"></i>
+       </div>
+       <div class="topic"><span id="services2-input"></span></div>
+     </div>
+       <div class="box">
+         <div class="icon">
+           <i class="fas fa-chart-line"></i>
+       </div>
+       <div class="topic"><span id="services3-input"></span></div>
+     </div>
+   </div>
+   </div>
+ </section>
+<section class="contact" id="contact">
+  <div class="content">
+    <div class="title"><span>Contact Me</span></div>
+    <div class="text">
+      <div class="topic">Have Any Project?</div>
+      <input type="text" placeholder="Email ID"><br>We will reach out to you soon... </input>
+      <div class="button">
+        <button>Submit</button>
+      </div>
+    </div>
+  </div>
+</section>
+  <script src="script.js"></script>
+       <script>
+        
+        const Name = localStorage.getItem('name-input');
+        const Profession = localStorage.getItem('profession-input');
+        const Nationality = localStorage.getItem('nationality-input');
+        const Aboutyou = localStorage.getItem('aboutyou-input');
+        const Yourskills = localStorage.getItem('yourskills-input');
+        const Services1 = localStorage.getItem('services1-input');
+        const Services2 = localStorage.getItem('services2-input');
+        const Services3 = localStorage.getItem('services3-input');
+        const Experience = localStorage.getItem('experience-input');
+        const Passion = localStorage.getItem('passion-input');
+
+        document.getElementById('name-input').textContent = Name;
+        document.getElementById('profession-input').textContent = Profession;
+        document.getElementById('nationality-input').textContent = Nationality;
+        document.getElementById('aboutyou-input').textContent = Aboutyou;
+        document.getElementById('yourskills-input').textContent = Yourskills;
+        document.getElementById('services1-input').textContent = Services1;
+        document.getElementById('services2-input').textContent = Services2;
+        document.getElementById('services3-input').textContent = Services3;
+        document.getElementById('experience-input').textContent = Experience;
+        document.getElementById('passion-input').textContent = Passion;
+
+
+
+  
+       </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 600px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #6e93f7;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <br><br>
+
+
+      <label for="profession">Profession:</label>
+      <input type="text" id="profession"  required>
+      <br><br>
+      
+      
+      <label for="nationality" >Nationality:</label>
+      <input type="text" placeholder="Name of the country" id="nationality" name="nationality" required>
+      <br><br>
+      
+      
+      <label for="about you" >About You:</label>
+      <input type="text" placeholder="Few lines or a parra" id="aboutyou"  required>
+      <br><br>
+      
+      <label for="passion" >Your Passion:</label>
+      <input type="text" placeholder="In one word" id="passion"  required>
+      <br><br>
+      
+      <label for="your skills" >Your Skills:</label>
+      <input type="text" placeholder="Few lines or a parra" id="yourskills"  required>
+      <br><br>
+
+
+      <label for="services 1">Services you can provide:</label>
+      
+
+      <input type="text" placeholder="1st preference" id="services1"  required>
+      <br><br>
+      <br>
+    
+
+
+
+
+      <input type="text" placeholder="2nd preference" id="services2"  required>
+      <br><br>
+      <br>
+
+
+
+
+      <input type="text" placeholder="3rd preference"id="services3"  required>
+      <br><br>
+
+
+      <label for="experience">Years of Experience:</label>
+      <input type="text" id="experience"  required>
+      <br><br>
+
+
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <script>
+      alert("This page would ask for your personal information")
+  
+      const form = document.getElementById('form');
+      const name = document.getElementById('name');
+      const profession = document.getElementById('profession');
+      const nationality = document.getElementById('nationality');
+      const aboutyou = document.getElementById('aboutyou');
+      const yourskills = document.getElementById('yourskills');
+      const services1 = document.getElementById('services1');
+      const services2 = document.getElementById('services2');
+      const services3 = document.getElementById('services3');
+      const experience = document.getElementById('experience');
+      const passion = document.getElementById('passion');
+    
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const namevalue = name.value;
+        const professionvalue = profession.value;
+        const nationalityvalue = nationality.value;
+        const aboutyouvalue = aboutyou.value;
+        const yourskillsvalue = yourskills.value;
+        const services1value = services1.value;
+        const services2value = services2.value;
+        const services3value = services3.value;
+        const experiencevalue = experience.value;
+        const passionvalue = passion.value;
+
+        localStorage.setItem('name-input', namevalue);
+        localStorage.setItem('profession-input', professionvalue);
+        localStorage.setItem('nationality-input', nationalityvalue);
+        localStorage.setItem('aboutyou-input', aboutyouvalue);
+        localStorage.setItem('yourskills-input', yourskillsvalue);
+        localStorage.setItem('services1-input', services1value);
+        localStorage.setItem('services2-input', services2value);
+        localStorage.setItem('services3-input', services3value);
+        localStorage.setItem('experience-input', experiencevalue);
+        localStorage.setItem('passion-input', passionvalue);
+
+
+        window.location.href = "index.html"
+
+      })
+      
+     </script>
+    
+  </div>
+</body>
+</html>
